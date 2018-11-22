@@ -1,23 +1,34 @@
-<div class="container">
-  <div class="row">
-    <div class="banner">
-      <%= @cocktail.name %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+          <div class="banner" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://source.unsplash.com/featured/?<%= @cocktail.name %>');">
+            <h1>
+              <%= @cocktail.name %>
+            </h1>
+          </div>
+        <div class="content">
+          <h3>Ingredients</h3>
+          <% @cocktail.doses.each do |dose| %>
+          <ul>
+            <li>
+              <%= dose.description %> <%= dose.ingredient.name %>
+            </li>
+          </ul>
+          <% end %>
+          <div class="row">
+            <div class="info">
+              <p>
+                <i class="fas fa-plus"></i>
+                <%= link_to "Add new ingredient", new_cocktail_dose_path(@cocktail) %>
+              </p>
+              <%= link_to "Back to cocktails", cocktails_path %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
 
 
 
-    <% @cocktail.doses.each do |dose| %>
-    <ul>
-      <li>
-        <%= dose.description %> <%= dose.ingredient.name %>
-      </li>
-    </ul>
-    <% end %>
-      <p>
-        <i class="fas fa-plus"></i>
-        <%= link_to "Add new ingredient", new_cocktail_dose_path(@cocktail) %>
-      </p>
-    <%= link_to "Back to cocktails", cocktails_path %>
