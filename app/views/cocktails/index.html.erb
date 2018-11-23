@@ -12,17 +12,17 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
         <%= link_to cocktail_path(cocktail) do %>
-          <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('<%= cocktail.url %>');">
-            <h3>
+          <div class="card" style="background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('<%= cocktail.photo %>');">
+            <h4>
               <%= cocktail.name %>
-            </h3>
+            </h4>
             <ul>
               <% cocktail.doses.each do |dose| %>
               <li><%= dose.description %> <%= dose.ingredient.name %></li>
               <% end %>
             </ul>
           </div>
-      <% end %>
+        <% end %>
       </div>
     <% end %>
   </div>

@@ -9,7 +9,15 @@
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   margin-top: 20px;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+  li {
+    font-size: 0.7
+  }
 }
+
+ ul {
+    list-style-type: none;
+  }
 
 .card:hover {
   margin-top: 10px;
@@ -35,6 +43,8 @@ a:hover {
     text-align: center;
     color: white;
     padding-top: 100px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+    letter-spacing: 5px;
   }
 }
 

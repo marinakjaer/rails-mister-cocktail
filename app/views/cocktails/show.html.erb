@@ -1,7 +1,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-6 col-xs-offset-3">
-          <div class="banner" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= @cocktail.url %>');">
+          <div class="banner" style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= @cocktail.photo %>');">
             <h1>
               <%= @cocktail.name %>
             </h1>
@@ -21,7 +21,10 @@
                 <i class="fas fa-plus"></i>
                 <%= link_to "Add new ingredient", new_cocktail_dose_path(@cocktail) %>
               </p>
-              <%= link_to "Back to cocktails", cocktails_path %>
+              <p>
+                <i class="fas fa-angle-double-left"></i>
+                <%= link_to "Back to cocktails", cocktails_path %>
+              </p>
             </div>
           </div>
         </div>
