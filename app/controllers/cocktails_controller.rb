@@ -25,6 +25,6 @@ class CocktailsController < ApplicationController
   def cocktail_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!
-    params.require(:cocktail).permit(:name, :ingredient, :doses, :photo, :photo_cache)
+    params.require(:cocktail).permit(:name, :ingredient, :doses, :photo)
   end
 end
